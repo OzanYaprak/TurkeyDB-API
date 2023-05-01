@@ -1,0 +1,203 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
+namespace TurkeyDB.Migrations
+{
+    /// <inheritdoc />
+    public partial class test : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.CreateTable(
+                name: "Mountains",
+                columns: table => new
+                {
+                    MountainID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MountainName = table.Column<string>(type: "nvarchar(70)", maxLength: 70, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mountains", x => x.MountainID);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Mountains",
+                columns: new[] { "MountainID", "MountainName" },
+                values: new object[,]
+                {
+                    { 1, "Abi Gamin" },
+                    { 2, "Annapurna Dakshin (Annapurna South)" },
+                    { 3, "Annapurna I" },
+                    { 4, "Annapurna II" },
+                    { 5, "Annapurna III" },
+                    { 6, "Annapurna IV" },
+                    { 7, "Apsarasas Kangri" },
+                    { 8, "Baintha Brakk" },
+                    { 9, "The Ogre" },
+                    { 10, "Baltoro Kangri" },
+                    { 11, "Batura Sar" },
+                    { 12, "Broad Peak" },
+                    { 13, "Chamlang" },
+                    { 14, "Changtse" },
+                    { 15, "Cho Oyu" },
+                    { 16, "Chogolisa" },
+                    { 17, "Chomo Lonzo" },
+                    { 18, "Chongtar" },
+                    { 19, "Churen Himal" },
+                    { 20, "The Crown" },
+                    { 21, "Huang Guan Shan" },
+                    { 22, "Dhaulagiri I" },
+                    { 23, "Dhaulagiri II" },
+                    { 24, "Dhaulagiri IV" },
+                    { 25, "Dhaulagiri V" },
+                    { 26, "Dhaulagiri VI" },
+                    { 27, "Diran" },
+                    { 28, "Distaghil Sar" },
+                    { 29, "Mount Everest" },
+                    { 30, "Sagarmatha" },
+                    { 31, "Chomolungma" },
+                    { 32, "Gangapurna" },
+                    { 33, "Gangkhar Puensum" },
+                    { 34, "Gasherbrum I" },
+                    { 35, "Hidden Peak" },
+                    { 36, "Gasherbrum II" },
+                    { 37, "Gasherbrum III" },
+                    { 38, "Gasherbrum IV" },
+                    { 39, "Ghent Kangri" },
+                    { 40, "Gimmigela Chuli" },
+                    { 41, "The Twins" },
+                    { 42, "Gongga Shan" },
+                    { 43, "Minya Konka" },
+                    { 44, "Gurla Mandhata" },
+                    { 45, "Gyachung Kang" },
+                    { 46, "Gyala Peri" },
+                    { 47, "Haramosh Peak" },
+                    { 48, "Himalchuli" },
+                    { 49, "Ismoil Somoni Peak" },
+                    { 50, "Istor-o-Nal" },
+                    { 51, "Kumbhakarna" },
+                    { 52, "Jannu" },
+                    { 53, "Jengish Chokusu" },
+                    { 54, "Tömür" },
+                    { 55, "Pik Pobedy" },
+                    { 56, "Jomolhari" },
+                    { 57, "Chomo Lhari" },
+                    { 58, "Jongsong Peak" },
+                    { 59, "Baltistan Peak" },
+                    { 60, "Kabru N" },
+                    { 61, "Kamet" },
+                    { 62, "Kangchenjunga" },
+                    { 63, "Kangpenqing" },
+                    { 64, "Gang Benchhen" },
+                    { 65, "Kangphu Kang" },
+                    { 66, "Shimokangri" },
+                    { 67, "Kanjut Sar" },
+                    { 68, "Karjiang" },
+                    { 69, "Khartaphu" },
+                    { 70, "Khunyang Chhish" },
+                    { 71, "Kirat Chuli" },
+                    { 72, "Kongur Tagh" },
+                    { 73, "Kongur Tiube" },
+                    { 74, "Kula Kangri" },
+                    { 75, "Labuche Kang" },
+                    { 76, "Labuche Kang III" },
+                    { 77, "Labuche Kang East" },
+                    { 78, "Langtang Lirung" },
+                    { 79, "Langtang Ri" },
+                    { 80, "Lhotse" },
+                    { 81, "Lupghar Sar" },
+                    { 82, "Makalu" },
+                    { 83, "Malangutti Sar" },
+                    { 84, "Malubiting" },
+                    { 85, "Mamostong Kangri" },
+                    { 86, "Mana Peak" },
+                    { 87, "Manaslu" },
+                    { 88, "Masherbrum" },
+                    { 89, "Molamenqing" },
+                    { 90, "Momhil Sar" },
+                    { 91, "Mukut Parbat" },
+                    { 92, "Muztagh Ata" },
+                    { 93, "Muztagh Tower" },
+                    { 94, "Namcha Barwa" },
+                    { 95, "Nanda Devi" },
+                    { 96, "Nanga Parbat" },
+                    { 97, "Nangpai Gosum" },
+                    { 98, "Ngadi Chuli" },
+                    { 99, "Noijin Kangsang" },
+                    { 100, "Norin Kang" },
+                    { 101, "Noshaq" },
+                    { 102, "Nuptse" },
+                    { 103, "Passu Sar" },
+                    { 104, "Porong Ri" },
+                    { 105, "Pumari Chhish" },
+                    { 106, "Putha Hiunchuli" },
+                    { 107, "Rakaposhi" },
+                    { 108, "Rimo I" },
+                    { 109, "Rimo III" },
+                    { 110, "Saltoro Kangri" },
+                    { 111, "Saraghrar" },
+                    { 112, "Saser Kangri I" },
+                    { 113, "Saser Kangri II E" },
+                    { 114, "Saser Kangri III" },
+                    { 115, "Sherpi Kangri" },
+                    { 116, "Shishapangma" },
+                    { 117, "Gosainthan" },
+                    { 118, "Shispare" },
+                    { 119, "Sia Kangri" },
+                    { 120, "Siguang Ri" },
+                    { 121, "Singhi Kangri" },
+                    { 122, "Skil Brum" },
+                    { 123, "Skyang Kangri" },
+                    { 124, "Sunanda Devi" },
+                    { 125, "Nanda Devi East" },
+                    { 126, "Talung" },
+                    { 127, "Teram Kangri I" },
+                    { 128, "Teram Kangri III" },
+                    { 129, "Tirich Mir" },
+                    { 130, "Tongshanjiabu" },
+                    { 131, "Trivor" },
+                    { 132, "Ultar" },
+                    { 133, "Yangra" },
+                    { 134, "Ganesh I" },
+                    { 135, "Yukshin Gardan Sar" },
+                    { 136, "Yutmaru Sar" },
+                    { 137, "Ağrı Dağı" },
+                    { 138, "Cilo Dağı" },
+                    { 139, "Süphan Dağı" },
+                    { 140, "Kaçkar Dağı" },
+                    { 141, "Erciyes Dağı" },
+                    { 142, "Küçükağrı Dağı" },
+                    { 143, "Kızılkaya Dağı" },
+                    { 144, "Demirkazık Dağı" },
+                    { 145, "Emler" },
+                    { 146, "Artos Dağı" },
+                    { 147, "Mercan Dağları" },
+                    { 148, "Tendürek Dağı" },
+                    { 149, "Koçbaşı Dağı" },
+                    { 150, "Aydos Dağı" },
+                    { 151, "Medetsiz Dağı" },
+                    { 152, "Kösedağ" },
+                    { 153, "Hasan Dağı" },
+                    { 154, "Kısır Dağı" },
+                    { 155, "Erek Dağı" },
+                    { 156, "Palandöken Dağı" },
+                    { 157, "Ulubaba Dağı" },
+                    { 158, "Berit Dağı" },
+                    { 159, "Nurhak Dağı" },
+                    { 160, "Uludağ" }
+                });
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropTable(
+                name: "Mountains");
+        }
+    }
+}
